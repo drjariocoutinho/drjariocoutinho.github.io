@@ -2,7 +2,7 @@
   'use strict';
 
   // WhatsApp profissional (55 = Brasil, 31 = DDD). Trocar aqui atualiza o site todo.
-  const WHATSAPP_NUMBER = '5531987874171';
+  const WHATSAPP_NUMBER = '5531985299277';
   const DEFAULT_MESSAGE = 'Olá, Jario! Vim pelo site e gostaria de agendar uma avaliação.';
 
   const whatsappUrl = (message) =>
