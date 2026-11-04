@@ -494,11 +494,36 @@ ol {
   display: none;
 }
 
-.hero-media {
+/* Retrato recortado saindo de um painel azul */
+.hero-portrait {
+  position: relative;
   justify-self: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   width: 100%;
-  max-width: 460px;
-  aspect-ratio: 4 / 5;
+  max-width: 440px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.hero-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 24% 0 0;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(90% 70% at 70% 10%, color-mix(in srgb, var(--accent) 45%, transparent), transparent 70%),
+    linear-gradient(160deg, var(--deep-2), var(--deep));
+}
+
+.hero-portrait img {
+  position: relative;
+  width: 84%;
+  max-height: min(600px, 74dvh);
+  object-fit: contain;
+  object-position: bottom;
 }
 
 @media (max-width: 860px) {
@@ -506,9 +531,9 @@ ol {
     grid-template-columns: 1fr;
   }
 
-  .hero-media {
+  .hero-portrait {
     justify-self: center;
-    max-width: 420px;
+    max-width: 380px;
   }
 }
 
@@ -1212,14 +1237,14 @@ ol {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy > *,
-  .hero-media {
+  .hero-portrait {
     animation: rise 0.9s var(--ease) both;
   }
 
   .hero-copy > :nth-child(2) { animation-delay: 0.08s; }
   .hero-copy > :nth-child(3) { animation-delay: 0.16s; }
   .hero-copy > :nth-child(4) { animation-delay: 0.24s; }
-  .hero-media { animation-delay: 0.12s; }
+  .hero-portrait { animation-delay: 0.12s; }
 
   .js .reveal {
     opacity: 0;

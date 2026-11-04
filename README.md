@@ -29,8 +29,8 @@ site/                  tudo que vai para o ar
 | Número do WhatsApp e mensagem padrão | `site/assets/js/main.js`, no topo (`WHATSAPP_NUMBER` e `DEFAULT_MESSAGE`) |
 | Textos, tratamentos e perguntas frequentes | `site/index.html` |
 | Cores | `site/assets/css/style.css`, variáveis em `:root` (tema claro) e no bloco `prefers-color-scheme: dark` (tema escuro) |
-| Foto principal | substituir `site/assets/img/jario-retrato.jpg` (vertical, 4:5) |
-| Foto da seção Sobre | substituir `site/assets/img/jario-consultorio.jpg` (vertical, 3:4) |
+| Foto principal | substituir `site/assets/img/jario-recorte.webp` (recorte com fundo transparente, vertical) |
+| Foto da seção Sobre | substituir `site/assets/img/jario-consultorio.webp` (vertical, 3:4) |
 
 ## Testar no computador
 
