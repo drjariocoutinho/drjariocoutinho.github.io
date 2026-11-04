@@ -28,6 +28,10 @@ jobs:
       - name: Configurar o GitHub Pages
         uses: actions/configure-pages@v5
 
+      # Troca __VERSAO__ pelo commit, para o celular não reaproveitar CSS/JS antigos do cache
+      - name: Carimbar versão no CSS e no JS
+        run: sed -i "s/__VERSAO__/${GITHUB_SHA::7}/g" site/index.html
+
       - name: Empacotar o site
         uses: actions/upload-pages-artifact@v4
         with:
